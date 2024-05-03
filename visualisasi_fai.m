@@ -71,22 +71,22 @@
 % colormap(parula); % Mengubah skema warna
 % colorbar; % Menambahkan colorbar untuk memberi skala warna
 
-%BAAAAAAGUUUUUUUUSSSSSS BANGET
-% Membuat data untuk plot 3D
-theta = linspace(0, 2*pi, 100);
-z = linspace(-2, 2, 100);
-[theta, z] = meshgrid(theta, z);
-x = (1 + 0.5*cos(3*theta)).*cos(theta);
-y = (1 + 0.5*cos(3*theta)).*sin(theta);
-
-% Membuat plot 3D
-figure;
-surf(x, y, z, 'EdgeColor', 'none');
-colormap(jet); % Mengubah colormap
-xlabel('X');
-ylabel('Y');
-zlabel('Z');
-title('Plot 3D Punya Fai');
+% %BAAAAAAGUUUUUUUUSSSSSS BANGET
+% % Membuat data untuk plot 3D
+% theta = linspace(0, 2*pi, 100);
+% z = linspace(-2, 2, 100);
+% [theta, z] = meshgrid(theta, z);
+% x = (1 + 0.5*cos(3*theta)).*cos(theta);
+% y = (1 + 0.5*cos(3*theta)).*sin(theta);
+% 
+% % Membuat plot 3D
+% figure;
+% surf(x, y, z, 'EdgeColor', 'none');
+% colormap(jet); % Mengubah colormap
+% xlabel('X');
+% ylabel('Y');
+% zlabel('Z');
+% title('Plot 3D Punya Fai');
 
 
 % % Membuat data untuk plot 3D
@@ -144,3 +144,77 @@ title('Plot 3D Punya Fai');
 % xlabel('Value');
 % ylabel('Frequency');
 % title('Histogram of sin(x^2 + y^2)');
+
+% % Definisi fungsi f(x)
+% % Mendefinisikan domain x
+% x = 0:0.001:1; % Asumsikan langkah 0.001 untuk akurasi
+% 
+% % Mendefinisikan fungsi f(x)
+% y = sin(5*pi*x).^6; % Fungsi equal maxima
+% 
+% % Menampilkan grafik fungsi
+% plot(x,y);
+% xlabel('x');
+% ylabel('f(x)');
+% title('Grafik Fungsi Equal Maxima');
+
+% % % Fungsi Himmelblau
+% % x = -10:0.2:10;
+% % y = -10:0.2:10;
+% % [X, Y] = meshgrid(x, y);
+% % Z = (X.^2 + Y - 11).^2 + (X + Y.^2 - 7).^2;
+% % contour(X, Y, Z, 'ShowText', 'on');
+% % xlabel('x');
+% % ylabel('y');
+% % title('Fungsi?Himmelblau');
+
+% % Fungsi Himmelblau
+% x = -10:0.2:10;
+% y = -10:0.2:10;
+% [X, Y] = meshgrid(x, y);
+% Z = (X.^2 + Y - 11).^2 + (X + Y.^2 - 7).^2;
+% surfc(X, Y, Z);
+% xlabel('x');
+% ylabel('y');
+% title('Contour Plot dari Fungsi?Himmelblau');
+
+% % % Fungsi Second Minimax
+% % x = -4:0.2:4;
+% % y = -4:0.2:4;
+% % [X, Y] = meshgrid(x, y);
+% % Z = 1/2*(X.^4 - 16*X.^2 + 5*X) + 1/2*(Y.^4 - 16*Y.^2 + 5*Y);
+% % 
+% % % Plot 3D
+% % surfc(X, Y, Z);
+% % xlabel('x');
+% % ylabel('y');
+% % zlabel('z');
+% % title('Plot 3D dari Fungsi Second?Minimax');
+
+
+% %f5 six hum camel back
+% x = -1.9:0.1:1.9;
+% y = -1.1:0.1:1.1;
+% [X, Y] = meshgrid(x, y);
+% Z = (4 - 2.1*X.^2 + X.^4/3).*X.^2 + X.*Y + (4*Y.^2 - 4).*Y.^2;
+% 
+% surf(X, Y, Z);
+% title('Six Hump Camel Back Function');
+% xlabel('x');
+% ylabel('y');
+% zlabel('f(x,y)');
+% meshc (X,Y,Z)
+
+
+%bird
+x = -10:0.1:10;
+y = -10:0.1:10;
+[X, Y] = meshgrid(x, y);
+Z = sin(X).*exp((1-cos(Y)).^2) + cos(Y).*exp((1-cos(Y)).^2)+(X-Y).^2;
+
+surf(X, Y, Z);
+title('bird');
+xlabel('x');
+ylabel('y');
+zlabel('f(x,y)');
+meshc (X,Y,Z)
