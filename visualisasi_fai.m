@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+%<<<<<<< HEAD
 % %visualisasi
 % 
 % %plot
@@ -219,7 +219,7 @@ xlabel('x');
 ylabel('y');
 zlabel('f(x,y)');
 meshc (X,Y,Z)
-=======
+%=======
 % %visualisasi
 % 
 % %plot
@@ -440,4 +440,4 @@ xlabel('x');
 ylabel('y');
 zlabel('f(x,y)');
 meshc (X,Y,Z)
->>>>>>> 021fa6416163626d673224072f13042a0ace0123
+%>>>>>>> 021fa6416163626d673224072f13042a0ace0123
